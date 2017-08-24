@@ -8,6 +8,7 @@ package mywebviewapp.example.com.mywebviewapp;
         import android.view.View;
         import android.webkit.WebView;
         import android.view.ViewGroup;
+        import android.webkit.WebViewClient;
 
 
 public class TabFragment1 extends Fragment {
@@ -20,7 +21,7 @@ public class TabFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_fragment_1, container, false);
         myWebView = (WebView)view.findViewById(R.id.mywebview);
-
+        myWebView.setWebViewClient(new WebViewClient());
         myWebView.getSettings().setJavaScriptEnabled(true);
 
         if(myUrl==null){

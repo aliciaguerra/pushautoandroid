@@ -1,20 +1,38 @@
 package mywebviewapp.example.com.mywebviewapp;
 
-/**
- * Created by aliciaguerra on 8/12/17.
- */
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebView;
 import android.view.ViewGroup;
+import android.webkit.WebViewClient;
+
 
 public class TabFragment3 extends Fragment {
 
+    WebView myWebView;
+    final static String products = "http://pushauto.com/products/";
+    String myUrl;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab_fragment_3, container, false);
+        View view = inflater.inflate(R.layout.tab_fragment_3, container, false);
+        myWebView = (WebView)view.findViewById(R.id.mywebview3);
+        myWebView.setWebViewClient(new WebViewClient());
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+        if(myUrl==null){
+            myUrl = products;
+        }
+
+        myWebView.loadUrl(myUrl);
+        return view;
+
     }
+
+
+
 }

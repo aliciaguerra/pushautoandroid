@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.ic_search));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_shopping));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_search));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_action_name));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_shopping));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_settings));
 

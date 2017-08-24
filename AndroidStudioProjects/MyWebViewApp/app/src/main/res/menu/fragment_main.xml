@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/miCompose"
-        android:icon="@drawable/refresh"
+        android:icon="@drawable/ic_refresh"
         app:showAsAction="ifRoom"
         android:title="Refresh"
         />

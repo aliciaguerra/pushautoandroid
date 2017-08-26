@@ -14,7 +14,7 @@ import android.webkit.WebViewClient;
 public class TabFragment3 extends Fragment {
 
     WebView myWebView;
-    final static String products = "http://pushauto.com/products/";
+    final static String products = "http://pushauto.com/consumer/transfers";
     String myUrl;
 
     @Override
